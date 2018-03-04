@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.iOS;
 
-public class BlendshapeDriver : MonoBehaviour {
+public class BlendshapeDriverTest : MonoBehaviour {
 
 	[SerializeField]
 	private string _blendShapeName = "blendShape2";
@@ -36,12 +36,18 @@ public class BlendshapeDriver : MonoBehaviour {
 	void Update () {
 
 		if (currentBlendShapes != null) {
-			foreach(KeyValuePair<string, float> kvp in currentBlendShapes)
+//			foreach(KeyValuePair<string, float> kvp in currentBlendShapes)
+//			{
+//				int blendShapeIndex = skinnedMeshRenderer.sharedMesh.GetBlendShapeIndex (_blendShapeName +  "." + kvp.Key);
+//				if (blendShapeIndex >= 0 ) {
+//					skinnedMeshRenderer.SetBlendShapeWeight (blendShapeIndex, kvp.Value * 100.0f);
+//				}
+//			}
+
+			int blendShapeIndex = skinnedMeshRenderer.sharedMesh.GetBlendShapeIndex (_blendShapeName + "." + "Face5");
+			if (blendShapeIndex >= 0) 
 			{
-				int blendShapeIndex = skinnedMeshRenderer.sharedMesh.GetBlendShapeIndex (_blendShapeName +  "." + kvp.Key);
-				if (blendShapeIndex >= 0 ) {
-					skinnedMeshRenderer.SetBlendShapeWeight (blendShapeIndex, kvp.Value * 100.0f);
-				}
+				skinnedMeshRenderer.SetBlendShapeWeight (blendShapeIndex, (1.0f - currentBlendShapes ["jawOpen"]) * 100.0f);
 			}
 		}
 	}
