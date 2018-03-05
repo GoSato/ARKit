@@ -60,4 +60,13 @@ public class UnityARFaceAnchorManager : MonoBehaviour {
 	{
 		
 	}
+
+	/// <summary>
+	/// 外からanchorPrefabを入れ替える
+	/// </summary>
+	/// <param name="obj">Object.</param>
+	public void SetAnchorPrefab(GameObject obj)
+	{
+		anchorPrefab = obj;
+	}
 }
