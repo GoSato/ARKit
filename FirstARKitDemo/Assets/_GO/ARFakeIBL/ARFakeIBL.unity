@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.2, g: 0.2, b: 0.2, a: 0}
+  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientEquatorColor: {r: 0.098908, g: 0.100485, b: 0.119403, a: 1}
   m_AmbientGroundColor: {r: 0.098908, g: 0.100485, b: 0.119403, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 72c6ba794c0c2459283fb5acebad2343, type: 2}
   m_HaloStrength: 0.5
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _yuvMat: {fileID: 2100000, guid: f1d9352050a75486f878ab19fa578f16, type: 2}
   _yuvSkyboxMat: {fileID: 2100000, guid: 72c6ba794c0c2459283fb5acebad2343, type: 2}
-  _frameInterval: 20
+  _frameInterval: 60
 --- !u!4 &264692460
 Transform:
   m_ObjectHideFlags: 0
@@ -935,6 +935,28 @@ Prefab:
     - target: {fileID: 137241589283561508, guid: 8cd9f15b70dcbcd4cb0b1541f1b8f50e,
         type: 2}
       propertyPath: m_DynamicOccludee
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705041044782070, guid: 8cd9f15b70dcbcd4cb0b1541f1b8f50e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705041044782070, guid: 8cd9f15b70dcbcd4cb0b1541f1b8f50e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705041044782070, guid: 8cd9f15b70dcbcd4cb0b1541f1b8f50e, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 95035254907565596, guid: 8cd9f15b70dcbcd4cb0b1541f1b8f50e,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 35eb9385b1a4648b4a33d62208aef692, type: 2}
+    - target: {fileID: 95035254907565596, guid: 8cd9f15b70dcbcd4cb0b1541f1b8f50e,
+        type: 2}
+      propertyPath: m_ApplyRootMotion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
